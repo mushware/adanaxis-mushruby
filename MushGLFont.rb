@@ -15,7 +15,8 @@ class MushGLFont
 # name - name for this font
 # texture_name - name of the texture used by this font
 # divide - number of tiles in the font in the [x, y] directions
-# extent - size of each tile [x, y]
+# extent - size of each tile [x, y] in pixels
+# size - size of each character [x, y] or x, with 1.0 filling the screen with one character
 #
 # Parameters mush be suppliead as a hash.
 #
@@ -41,7 +42,8 @@ class MushGLFont
 #   :name => 'font1',
 #   :texture_name => 'font1-tex',
 #   :divide => [8,12],
-#   :extent => [337.0/8, 768.0/12]
+#   :extent => [337.0/8, 768.0/12],
+#   :size => 0.05
 # )
 # (end)
 #
