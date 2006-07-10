@@ -4,6 +4,7 @@ class MushMenu
   MENU_SYMBOL = 1
   
   def initialize(params)
+    @title = params[:title]
     @menu = params[:menu]
     @font = MushGLFont.new(:name => 'library-font1');
     @size = params[:size] || 0.02
@@ -11,13 +12,21 @@ class MushMenu
     @current = 0
     @colour = params[:colour] || MushVector.new(1,1,1,0.3)
     @highlight_colour = params[:highlight_colour] || MushVector.new(1,1,1,1)
+    @title_colour = params[:title_colour] || MushVector.new(1,1,1,1)
   end
 
-  attr_accessor :menu, :font, :size, :spacing, :current, :colour, :highlight_colour
+  attr_accessor :title, :menu, :font, :size, :spacing, :current, :colour, :highlight_colour, :title_colour
 
   def mRender(msec)
     xCoord = -0.4
     yCoord = 0.22
+    
+    if @title
+      @font.colour = @title_colour      
+      @font.mRenderAtSize(@title, xCoord, yCoord, @size)
+      yCoord -= @size * @spacing * 1.2
+    end
+    
     @menu.each_index do |i|
       if i == @current
         @font.colour = @highlight_colour
