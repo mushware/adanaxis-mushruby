@@ -2,6 +2,7 @@
 class MushMenu
   MENU_STRING = 0
   MENU_SYMBOL = 1
+  MENU_PARAM = 2
   
   def initialize(params)
     @title = params[:title]
@@ -51,10 +52,17 @@ class MushMenu
   def mEnter(obj)
     if (@current < @menu.size)
       symbol = @menu[@current][MENU_SYMBOL]
-      obj.send(symbol)
+      obj.send(symbol, @menu[@current][MENU_PARAM])
     end
   end
-    
+
+  def mKeypress(obj, inKey)
+    if (@current < @menu.size)
+      symbol = @menu[@current][MENU_SYMBOL]
+      obj.send(symbol, inKey, @menu[@current][MENU_PARAM])
+    end
+  end
+
 
     
 end
