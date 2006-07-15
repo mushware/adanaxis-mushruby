@@ -4,6 +4,9 @@ class MushMenu
   MENU_SYMBOL = 1
   MENU_PARAM = 2
   
+  YCOORD_DEFAULT = 0.22
+  YCOORD_CENTRE = -0.18
+  
   def initialize(params)
     @title = params[:title]
     @menu = params[:menu]
@@ -14,13 +17,19 @@ class MushMenu
     @colour = params[:colour] || MushVector.new(1,1,1,0.3)
     @highlight_colour = params[:highlight_colour] || MushVector.new(1,1,1,1)
     @title_colour = params[:title_colour] || MushVector.new(1,1,1,1)
+    @yCoord = YCOORD_DEFAULT
   end
 
   attr_accessor :title, :menu, :font, :size, :spacing, :current, :colour, :highlight_colour, :title_colour
 
   def mRender(msec)
     xCoord = -0.4
-    yCoord = 0.22
+    
+    newYCoord = @current * @size * @spacing + YCOORD_CENTRE
+    newYCoord = YCOORD_DEFAULT if newYCoord < YCOORD_DEFAULT
+    
+    @yCoord = 0.875 * @yCoord + 0.125 * newYCoord
+    yCoord = @yCoord
     
     if @title
       @font.colour = @title_colour      
