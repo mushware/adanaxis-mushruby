@@ -1,5 +1,5 @@
 
-class MushGame << MushObject
+class MushGame < MushObject
 # Class: MushGame
 #
 # Description:

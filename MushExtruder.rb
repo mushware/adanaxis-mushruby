@@ -19,7 +19,7 @@ class MushExtruder
 # sourceface - Number of the face used for the base of this extrusion
 # displacement - <MushDisplacement> applied to the source face to generate the extruded face
 # displacement_velocity - <MushDisplacement> applied to displacement after each extrusion
-# num_iterations - Number of times to copy and diplace the face
+# num_iterations - Number of times to copy and displace the face
 # to_point - Whether the final step extrudes to a point
 #
 # Returns:
