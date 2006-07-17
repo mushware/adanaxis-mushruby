@@ -19,7 +19,7 @@ class MushTools
 #
 # Returns:
 #
-# New MushRotation object
+# New MushRotation object.
 #
 # Example:
 #
@@ -37,7 +37,7 @@ class MushTools
 #
 # Returns:
 #
-# New MushRotation object
+# New MushRotation object.
 #
 # Example:
 #
@@ -55,7 +55,7 @@ class MushTools
 #
 # Returns:
 #
-# New MushRotation object
+# New MushRotation object.
 #
 # Example:
 #
@@ -73,7 +73,7 @@ class MushTools
 #
 # Returns:
 #
-# New MushRotation object
+# New MushRotation object.
 #
 # Example:
 #
@@ -91,7 +91,7 @@ class MushTools
 #
 # Returns:
 #
-# New MushRotation object
+# New MushRotation object.
 #
 # Example:
 #
@@ -109,7 +109,7 @@ class MushTools
 #
 # Returns:
 #
-# New MushRotation object
+# New MushRotation object.
 #
 # Example:
 #
@@ -127,12 +127,48 @@ class MushTools
 #
 # Returns:
 #
-# New MushRotation object
+# New MushRotation object.
 #
 # Example:
 #
 # (example)
 #   rotation1 = MushTools.cRotationInYZPlane(Math::PI / 2)
+# (end)
+#
+# Method: cRandomOrientation
+#
+# Creates a <MushRotation> object to be used as a random orientation.  
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# New MushRotation object.
+#
+# Example:
+#
+# (example)
+#   rotation1 = MushTools.cRandomOrientation
+# (end)
+#
+# Method: cRandomUnitVector
+#
+# Returns a random unit vector.  
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# New <MushVector> object.
+#
+# Example:
+#
+# (example)
+#   vector1 = MushTools.cRandomUnitVector()
 # (end)
 #
 # Group: Links

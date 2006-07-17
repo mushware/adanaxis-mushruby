@@ -80,6 +80,15 @@ class MushMesh
 #
 # name - Name of the material to be added, previously created using <MushMaterial.cDefine>
 #
+# Method: mBillboardSet
+#
+# Sets the billboard flag for the mesh.  If true, the mesh will always be rendered
+# with the xy plane facing the camera.
+#
+# Parameters:
+#
+# billboard - true or false
+#
 # Group: Links
 #- Wrapper file:doxygen/class_mush_mesh_ruby_mesh.html
 #- Implemetation file:doxygen/class_mush_mesh4_mesh.html
