@@ -9,7 +9,7 @@ class MushPost
 #
 # Method: new
 #
-# Creates an new MushPost object.  
+# Creates a new MushPost object.  
 #
 # Parameters:
 #
