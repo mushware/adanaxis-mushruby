@@ -49,6 +49,20 @@ class MushMenu
       yCoord -= @size * @spacing
     end
   end
+
+  def mLeft(obj)
+    if @current < @menu.size
+      symbol = @menu[@current][MENU_SYMBOL]
+      obj.send(symbol, @menu[@current][MENU_PARAM], -1)
+    end
+  end
+  
+  def mRight(obj)
+    if @current < @menu.size
+      symbol = @menu[@current][MENU_SYMBOL]
+      obj.send(symbol, @menu[@current][MENU_PARAM], 1)
+    end
+  end
   
   def mUp
     @current = (@current + @menu.size - 1) % @menu.size
@@ -59,9 +73,9 @@ class MushMenu
   end
     
   def mEnter(obj)
-    if (@current < @menu.size)
+    if @current < @menu.size
       symbol = @menu[@current][MENU_SYMBOL]
-      obj.send(symbol, @menu[@current][MENU_PARAM])
+      obj.send(symbol, @menu[@current][MENU_PARAM], 0)
     end
   end
 
