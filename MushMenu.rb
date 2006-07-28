@@ -18,9 +18,10 @@ class MushMenu
     @highlight_colour = params[:highlight_colour] || MushVector.new(1,1,1,1)
     @title_colour = params[:title_colour] || MushVector.new(1,1,1,1)
     @yCoord = YCOORD_DEFAULT
+    @leftright = params[:leftright] || false
   end
 
-  attr_accessor :title, :menu, :font, :size, :spacing, :current, :colour, :highlight_colour, :title_colour
+  attr_accessor :title, :menu, :font, :size, :spacing, :current, :colour, :highlight_colour, :title_colour, :leftright
 
   def mRender(msec)
     xCoord = -0.4
@@ -51,14 +52,14 @@ class MushMenu
   end
 
   def mLeft(obj)
-    if @current < @menu.size
+    if @leftright && @current < @menu.size
       symbol = @menu[@current][MENU_SYMBOL]
       obj.send(symbol, @menu[@current][MENU_PARAM], -1)
     end
   end
   
   def mRight(obj)
-    if @current < @menu.size
+    if @leftright && @current < @menu.size
       symbol = @menu[@current][MENU_SYMBOL]
       obj.send(symbol, @menu[@current][MENU_PARAM], 1)
     end
@@ -85,8 +86,6 @@ class MushMenu
       obj.send(symbol, inKey, @menu[@current][MENU_PARAM])
     end
   end
-
-
-    
+  
 end
   
