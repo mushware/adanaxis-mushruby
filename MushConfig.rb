@@ -12,5 +12,8 @@ class MushConfig
   def self.cGlobalSpacesPath
     $MUSHCONFIG['APPLPATH']+"/spaces"
   end
+  def self.cGlobalWavesPath
+    $MUSHCONFIG['APPLPATH']+"/waves"
+  end
 
 end
