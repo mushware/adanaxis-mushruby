@@ -1,9 +1,9 @@
 #%Header {
 ##############################################################################
 #
-# File: data-adanaxis/mushruby/test/run_tests.rb
+# File data-adanaxis/mushruby/test/run_tests.rb
 #
-# Author: Andy Southgate 2006
+# Author Andy Southgate 2006
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } rPAe5Kuut6MruD9lSdryWw
-# $Id$
-# $Log$
+#%Header } DKqbvv3VkWMej5/Bj9Oaqw
+# $Id: run_tests.rb,v 1.2 2006/08/01 13:41:09 southa Exp $
+# $Log: run_tests.rb,v $
+# Revision 1.2  2006/08/01 13:41:09  southa
+# Pre-release updates
+#
 
 require 'test/unit/ui/console/testrunner'
 require 'test/unit/testsuite'

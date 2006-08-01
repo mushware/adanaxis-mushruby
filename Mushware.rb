@@ -1,9 +1,9 @@
 #%Header {
 ##############################################################################
 #
-# File: data-adanaxis/mushruby/Mushware.rb
+# File data-adanaxis/mushruby/Mushware.rb
 #
-# Author: Andy Southgate 2006
+# Author Andy Southgate 2006
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } 5dAH1VPf9sGPSb/dh9SXVg
-# $Id$
-# $Log$
+#%Header } sfMMKoLuaimDvq9ZamQatQ
+# $Id: Mushware.rb,v 1.5 2006/08/01 13:41:08 southa Exp $
+# $Log: Mushware.rb,v $
+# Revision 1.5  2006/08/01 13:41:08  southa
+# Pre-release updates
+#
 
 require 'MushBasePrism.rb'
 require 'MushConfig.rb'

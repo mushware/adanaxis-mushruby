@@ -1,9 +1,9 @@
 #%Header {
 ##############################################################################
 #
-# File: data-adanaxis/mushruby/MushVector.rb
+# File data-adanaxis/mushruby/MushVector.rb
 #
-# Author: Andy Southgate 2006
+# Author Andy Southgate 2006
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } RQB++2ACw3W3S9lQZb7/+A
-# $Id$
-# $Log$
+#%Header } LtBvz+AouUXku9ft9ZYWiQ
+# $Id: MushVector.rb,v 1.2 2006/08/01 13:41:08 southa Exp $
+# $Log: MushVector.rb,v $
+# Revision 1.2  2006/08/01 13:41:08  southa
+# Pre-release updates
+#
 
 # This class wraps the C++ class MushMeshRubyVector
 class MushVector

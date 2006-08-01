@@ -1,9 +1,9 @@
 #%Header {
 ##############################################################################
 #
-# File: data-adanaxis/mushruby/MushExtruder.rb
+# File data-adanaxis/mushruby/MushExtruder.rb
 #
-# Author: Andy Southgate 2006
+# Author Andy Southgate 2006
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } 6516ycM1nUZfIXeTu6yMPw
-# $Id$
-# $Log$
+#%Header } qZPv3xnj/womyI73YlAUGg
+# $Id: MushExtruder.rb,v 1.3 2006/08/01 13:41:06 southa Exp $
+# $Log: MushExtruder.rb,v $
+# Revision 1.3  2006/08/01 13:41:06  southa
+# Pre-release updates
+#
 
 # Other methods provided by MushMeshRubyExtruder.cpp
 class MushExtruder

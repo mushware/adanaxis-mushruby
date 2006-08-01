@@ -1,9 +1,9 @@
 #%Header {
 ##############################################################################
 #
-# File: data-adanaxis/mushruby/test/tc_MushRotation.rb
+# File data-adanaxis/mushruby/test/tc_MushRotation.rb
 #
-# Author: Andy Southgate 2006
+# Author Andy Southgate 2006
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } 0gK19bWG34glVPTfT65THA
-# $Id$
-# $Log$
+#%Header } hun53y2tQollk3f/becJRQ
+# $Id: tc_MushRotation.rb,v 1.2 2006/08/01 13:41:10 southa Exp $
+# $Log: tc_MushRotation.rb,v $
+# Revision 1.2  2006/08/01 13:41:10  southa
+# Pre-release updates
+#
 
 require 'test/unit'
 require 'MushRotation.rb'

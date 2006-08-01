@@ -1,9 +1,9 @@
 #%Header {
 ##############################################################################
 #
-# File: data-adanaxis/mushruby/MushDisplacement.rb
+# File data-adanaxis/mushruby/MushDisplacement.rb
 #
-# Author: Andy Southgate 2006
+# Author Andy Southgate 2006
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } hHyoHnXNPJ4Wa7UFmrYidw
-# $Id$
-# $Log$
+#%Header } W9IAAKIpcxpNo+Bv7zs2Wg
+# $Id: MushDisplacement.rb,v 1.2 2006/08/01 13:41:06 southa Exp $
+# $Log: MushDisplacement.rb,v $
+# Revision 1.2  2006/08/01 13:41:06  southa
+# Pre-release updates
+#
 
 class MushDisplacement
 # Class: MushDisplacement
@@ -39,7 +42,7 @@ class MushDisplacement
 #
 # offset - <MushVector> offset
 # rotation - <MushRotation> rotation
-# scale - either <MushVector> or singel value (which is converted to <MushVector.new>(value,value,vallue,value)
+# scale - either a <MushVector> or single value (which is converted to <MushVector.new>(value,value,value,value)
 #
 # Parameters may be supplied as a hash or parameter list.
 #

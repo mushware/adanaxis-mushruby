@@ -1,9 +1,9 @@
 #%Header {
 ##############################################################################
 #
-# File: data-adanaxis/mushruby/MushGLTexture.rb
+# File data-adanaxis/mushruby/MushGLTexture.rb
 #
-# Author: Andy Southgate 2006
+# Author Andy Southgate 2006
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } BE0vBnZvgNCVxwfAu3BcOA
-# $Id$
-# $Log$
+#%Header } p8fMYjW3s0cDa/sAdyjJNg
+# $Id: MushGLTexture.rb,v 1.3 2006/08/01 13:41:07 southa Exp $
+# $Log: MushGLTexture.rb,v $
+# Revision 1.3  2006/08/01 13:41:07  southa
+# Pre-release updates
+#
 
 class MushGLTexture
 # Class: MushGLTexture
@@ -28,9 +31,9 @@ class MushGLTexture
 #
 # This object contains and generates texture maps.
 #
-# Method: new
+# Method: cDefine
 #
-# Creates a new MushGLTexture object.  
+# Defines a new texture.  
 #
 # Parameters:
 #
@@ -39,97 +42,73 @@ class MushGLTexture
 # name - Name used to refer to the texture
 # type - String that determines the class used to handle the texture, and thereby the
 # parameters that can be used
-# size - [x, y] determines the size of the texture
+# size - size of the texture in pixels
 # storagetype - use "U8" if the texture is to be used for palette lookup, otherwise "GL" (the default)
-# cache - Whether the texture should be cached (true) or not.  Default depends on the type.
+# cache - Whether the texture should be cached or not.  Default is sensible for the type.
 #
-# Parameters must be supplied as a hash.
+# Parameters for all skin textures.
+#
+# meshname - name of the mesh to be skinned
+# palette - name of a texture to be used as a colour palette
+# palettestart - start uv coordinates for palette lookup
+# palettevector - uv vector defining the range of the palette
+# scale - vector multiplier used to scale the 4D position before passing the skin function
+# offset - vector offset added to the 4D position before passing to the skin function
+#
+# Parameters for CellNoise types.
+#
+# numoctaves - Number of octaves of noise, typically 4 to 12
+# octaveratio - Amplitude multiplier between octaves, typically 0.5
+#
+# Parameters for Grid types.
+#
+# gridratio - vector defining the width 0.0 - 1.0 of the grid lines in each direction
+# gridsharpness - vector defining the sharpness 0.0 - 1.0 of the grid lines in each direction
+#
+# Parameters for Radial types.
 #
 # Returns:
 #
-# New MushGLTexture object
-#
-# Default:
-#
-# The default constructor creates an object with zero-values positions and velocities.
+# None.
 #
 # Example:
 #
 # (example)
-# GLTexture1 = MushGLTexture.new
-# GLTexture2 = MushGLTexture.new(
-#   :position => MushVector.new(1,2,3,4),
-#   :angular_position => MushTools.cRotationInXYPlane(Math::PI/2),
-#   :velocity => MushVector.new(0,0,0,-0.3),
-#   :angular_velocity => MushTools.cRotationInZWPlane(Math::PI/20)
-# )
-# GLTexture3 = MushGLTexture.new(
-#   MushVector.new(1,2,3,4),
-#   MushVector.new(0,0,0,-0.3),
-#   MushTools.cRotationInZWPlane(Math::PI/2),
-#   MushTools.cRotationInZWPlane(Math::PI/20)
-# )
+# MushGLTexture::cDefine(
+#   :name          => 'attendant-tex',
+#   :type          => 'CellNoise',
+#   :meshname      => 'attendant',
+#   :size          => [512, 512],
+#   :palette       => 'palette1',
+#   :palettestart  => [0,0.5],
+#   :palettevector => [0.99,0],
+#   :scale         => [0.1, 0.1, 0.1, 0.1],
+#   :numoctaves    => 8,
+#   :octaveratio   => 0.5)
 # (end)
 #
-# Method: position
+# Method: cPreCache
+#
+# Loads a texture into memory.  Usually, textures will load when they are first
+# used.  This function loads the names textured immediately, prevently a delay
+# during gameplay as the texture is loaded or generated.
+#
+# Parameters:
+#
+# name - name of the texture as passed to cDefine
 #
 # Returns:
 #
-# Position <MushVector>
+# None.
 #
-# Method: velocity
+# Example:
 #
-# Returns:
-#
-# Velocity <MushVector>
-#
-# Method: angular_position
-#
-# Returns:
-#
-# Angular position <MushRotation>
-#
-# Method: angular_velocity
-#
-# Returns:
-#
-# Angular velocity <MushRotation>
-#
-# Method: position=
-#
-# Sets the position vector.
-#
-# Parameter:
-#
-# Position <MushVector>
-# 
-# Method: velocity=
-#
-# Sets the velocity vector.
-#
-# Parameter:
-#
-# Velocity <MushVector>
-# 
-# Method: angular_position=
-#
-# Sets the angular position element.
-#
-# Parameter:
-#
-# Angular position <MushRotation>
-# 
-# Method: angular_velocity=
-#
-# Sets the angular velocity element.
-#
-# Parameter:
-#
-# Angular velocity <MushRotation>
+# (example)
+# MushGLTexture::cPreCache('attendant-tex')
+# (end)
 #
 # Group: Links
-#- Wrapper file:doxygen/class_mush_mesh_ruby_GLTexture.html
-#- Implemetation file:doxygen/class_mush_mesh_GLTextureicity.html
+#- Implemetation file:doxygen/class_mush_g_l_texture.html
 
   def self.cDefine(paramHash)
     cRubyDefine(paramHash);

@@ -1,9 +1,9 @@
 #%Header {
 ##############################################################################
 #
-# File: data-adanaxis/mushruby/test/tc_MushPost.rb
+# File data-adanaxis/mushruby/test/tc_MushPost.rb
 #
-# Author: Andy Southgate 2006
+# Author Andy Southgate 2006
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } OpBaNv9R0qbygX8wWJWwBQ
-# $Id$
-# $Log$
+#%Header } P1RjXUUrhsjOVogghlkzSQ
+# $Id: tc_MushPost.rb,v 1.2 2006/08/01 13:41:10 southa Exp $
+# $Log: tc_MushPost.rb,v $
+# Revision 1.2  2006/08/01 13:41:10  southa
+# Pre-release updates
+#
 
 class TestMushPost < Test::Unit::TestCase
   def test_simple

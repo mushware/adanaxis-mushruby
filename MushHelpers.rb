@@ -1,9 +1,9 @@
 #%Header {
 ##############################################################################
 #
-# File: data-adanaxis/mushruby/MushHelpers.rb
+# File data-adanaxis/mushruby/MushHelpers.rb
 #
-# Author: Andy Southgate 2006
+# Author Andy Southgate 2006
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } RHzYsEcZ/4ptOfDJyhZnjg
-# $Id$
-# $Log$
+#%Header } bU2xndfLageIWNYt4Lzsvw
+# $Id: MushHelpers.rb,v 1.2 2006/08/01 13:41:07 southa Exp $
+# $Log: MushHelpers.rb,v $
+# Revision 1.2  2006/08/01 13:41:07  southa
+# Pre-release updates
+#
 
 # Format to strings for printing
 class Array

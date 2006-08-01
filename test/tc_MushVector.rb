@@ -1,9 +1,9 @@
 #%Header {
 ##############################################################################
 #
-# File: data-adanaxis/mushruby/test/tc_MushVector.rb
+# File data-adanaxis/mushruby/test/tc_MushVector.rb
 #
-# Author: Andy Southgate 2006
+# Author Andy Southgate 2006
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } Gm6OdqnkTBAvmSPPspErPQ
-# $Id$
-# $Log$
+#%Header } iT6tycmkmTcONjwY44G/Yw
+# $Id: tc_MushVector.rb,v 1.2 2006/08/01 13:41:10 southa Exp $
+# $Log: tc_MushVector.rb,v $
+# Revision 1.2  2006/08/01 13:41:10  southa
+# Pre-release updates
+#
 
 require 'test/unit'
 

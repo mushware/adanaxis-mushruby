@@ -1,9 +1,9 @@
 #%Header {
 ##############################################################################
 #
-# File: data-adanaxis/mushruby/MushGame.rb
+# File data-adanaxis/mushruby/MushGame.rb
 #
-# Author: Andy Southgate 2006
+# Author Andy Southgate 2006
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } 1MZt9XG7+fmqyI3xCEKfoA
-# $Id$
-# $Log$
+#%Header } BE+JCzTHZq0IXlCcJa0Law
+# $Id: MushGame.rb,v 1.3 2006/08/01 13:41:07 southa Exp $
+# $Log: MushGame.rb,v $
+# Revision 1.3  2006/08/01 13:41:07  southa
+# Pre-release updates
+#
 
 class MushGame < MushObject
 # Class: MushGame
@@ -185,6 +188,236 @@ class MushGame < MushObject
 # Returns:
 #
 # None.
+#
+# Method: cDisplayModeString
+#
+# Returns a string describing the the current display mode.
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# A string usable to display the mode details, e.g. '640x480 window'.
+#
+# Method: cPreviousDisplayMode
+#
+# Change to the previous display mode number.
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# None.
+#
+# Method: cNextDisplayMode
+#
+# Change to the next display mode number.
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# None.
+#
+# Method: cDisplayReset
+#
+# Resets the display, using a newly configured mode if necessary.
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# None.
+#
+# Method: cAudioVolume
+#
+# Reader for the configured audio volume.
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# Volume, range 0..100.
+#
+# Method: cAudioVolumeSet
+#
+# Writer for the configured audio volume.
+#
+# Parameters:
+#
+# volume - New volume, range 0..100.
+#
+# Returns:
+#
+# None.
+#
+# Method: cMusicVolume
+#
+# Reader for the configured music volume.
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# Volume, range 0..100.
+#
+# Method: cMusicVolumeSet
+#
+# Writer for the configured music volume.
+#
+# Parameters:
+#
+# volume - New volume, range 0..100.
+#
+# Returns:
+#
+# None.
+#
+# Method: cTextureDetail
+#
+# Reader for the configured texture detail.
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# Texture detail, range 0..4.
+#
+# Method: cTextureDetailSet
+#
+# Writer for the configured texture detail.
+#
+# Parameters:
+#
+# detail - New texture detail, range 0..4
+#
+# Returns:
+#
+# None.
+#
+# Method: cMouseSensitivity
+#
+# Reader for the configured mouse sensitivity.
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# Configured mouse sensitivity., range -10.0 .. 10.0.
+#
+# Method: cMouseSensitivitySet
+#
+# Writer for the configured mouse sensitivity.
+#
+# Parameters:
+#
+# sensitivity - New texture detail, range -10.0 .. 10.0
+#
+# Returns:
+#
+# None.
+#
+# Method: cBrightness
+#
+# Reader for the configured brightness.
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# Configured brightness, range 0..2.0.
+#
+# Method: cBrightnessSet
+#
+# Writer for the configured brightness.
+#
+# Parameters:
+#
+# brightness - New brightness, range 0..2.0
+#
+# Returns:
+#
+# None.
+#
+# Method: cGameDialoguesLoad
+#
+# Loads a game dialogues file from the specified filename.
+#
+# Parameters:
+#
+# filename - full filename of game dialogues file
+#
+# Returns:
+#
+# None.
+#
+# Method: cNamedDialoguesAdd
+#
+# Adds named dialogues to thse currently showing.
+#
+# Parameters:
+#
+# names - regular expression used to select dialogues by name
+#
+# Returns:
+#
+# None.
+#
+# Method: cSoundDefine
+#
+# Associates a sound name with a filename.
+#
+# Parameters:
+#
+# name - name of sound
+# filename - full filename of sound file (e.g. WAV)
+#
+# Returns:
+#
+# None.
+#
+# Method: cSoundStreamDefine
+#
+# Associates a sound stream name with a filename.
+#
+# Parameters:
+#
+# name - name of sound stream
+# filename - full filename of streamable sound file (e.g. OGG)
+#
+# Returns:
+#
+# None.
+#
+# Method: cPackageID
+#
+# Returns the ID string of the package.
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# Package ID string.
 #
 # Group: Links
 #- Wrapper file:doxygen/class_mush_game_ruby.html
