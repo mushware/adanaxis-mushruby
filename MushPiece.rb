@@ -1,7 +1,7 @@
 #%Header {
 ##############################################################################
 #
-# File data-adanaxis/mushruby/Mushware.rb
+# File data-adanaxis/mushruby/MushPiece.rb
 #
 # Author Andy Southgate 2006
 #
@@ -17,33 +17,46 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } sfMMKoLuaimDvq9ZamQatQ
-# $Id: Mushware.rb,v 1.6 2006/08/01 17:21:14 southa Exp $
-# $Log: Mushware.rb,v $
-# Revision 1.6  2006/08/01 17:21:14  southa
-# River demo
+#%Header } IbOgoniOlrZVt52ex79DlA
+# Class: MushPiece
 #
-# Revision 1.5  2006/08/01 13:41:08  southa
-# Pre-release updates
+# Description:
 #
+# This object contains a reference to a game piece.
+#
+# Method: new
+#
+# Creates a new MushPost object.  
+#
+# Parameters:
+#
+# type - Name of the type to use
+#
+# Returns:
+#
+# New MushPiece object
+#
+# Default:
+#
+# There is no default constructor.
+#
+# Example:
+#
+# (example)
+# (end)
+#
+# Group: Links
+#- Wrapper file:doxygen/class_mush_mesh_ruby_post.html
+#- Implemetation file:doxygen/class_mush_mesh_posticity.html
 
-require 'MushBasePrism.rb'
-require 'MushConfig.rb'
-require 'MushDisplacement.rb'
-require 'MushEvent.rb'
-require 'MushEventTimer.rb'
-require 'MushExtruder.rb'
-# require 'MushGame.rb'
-require 'MushGLFont.rb'
-require 'MushGLTexture.rb'
-require 'MushHelpers.rb'
-require 'MushKeys.rb'
-require 'MushMaterial.rb'
-require 'MushMenu.rb'
-require 'MushMesh.rb'
-require 'MushPiece.rb'
-require 'MushPost.rb'
-require 'MushRegistered.rb'
-require 'MushRotation.rb'
-require 'MushTools.rb'
-require 'MushVector.rb'
+class MushPiece < MushObject
+
+
+  def mHandle(event)
+    raise TypeError.new("Unhandled message #{event.class} in #{self.class}")
+  end
+
+  def mInitialise
+    # No default action
+  end
+end

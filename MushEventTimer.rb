@@ -1,7 +1,7 @@
 #%Header {
 ##############################################################################
 #
-# File data-adanaxis/mushruby/Mushware.rb
+# File data-adanaxis/mushruby/MushEventTimer.rb
 #
 # Author Andy Southgate 2006
 #
@@ -17,33 +17,15 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } sfMMKoLuaimDvq9ZamQatQ
-# $Id: Mushware.rb,v 1.6 2006/08/01 17:21:14 southa Exp $
-# $Log: Mushware.rb,v $
-# Revision 1.6  2006/08/01 17:21:14  southa
-# River demo
-#
-# Revision 1.5  2006/08/01 13:41:08  southa
-# Pre-release updates
-#
+#%Header } QvYyAPwRqishgI9dV3W3FA
+# $Id$
+# $Log$
 
-require 'MushBasePrism.rb'
-require 'MushConfig.rb'
-require 'MushDisplacement.rb'
 require 'MushEvent.rb'
-require 'MushEventTimer.rb'
-require 'MushExtruder.rb'
-# require 'MushGame.rb'
-require 'MushGLFont.rb'
-require 'MushGLTexture.rb'
-require 'MushHelpers.rb'
-require 'MushKeys.rb'
-require 'MushMaterial.rb'
-require 'MushMenu.rb'
-require 'MushMesh.rb'
-require 'MushPiece.rb'
-require 'MushPost.rb'
-require 'MushRegistered.rb'
-require 'MushRotation.rb'
-require 'MushTools.rb'
-require 'MushVector.rb'
+
+class MushEventTimer < MushEvent
+  def initialize
+    @id = 0
+  end
+  attr_accessor :id
+end

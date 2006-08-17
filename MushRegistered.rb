@@ -1,7 +1,7 @@
 #%Header {
 ##############################################################################
 #
-# File data-adanaxis/mushruby/Mushware.rb
+# File data-adanaxis/mushruby/MushRegistered.rb
 #
 # Author Andy Southgate 2006
 #
@@ -17,33 +17,22 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } sfMMKoLuaimDvq9ZamQatQ
-# $Id: Mushware.rb,v 1.6 2006/08/01 17:21:14 southa Exp $
-# $Log: Mushware.rb,v $
-# Revision 1.6  2006/08/01 17:21:14  southa
-# River demo
-#
-# Revision 1.5  2006/08/01 13:41:08  southa
-# Pre-release updates
-#
+#%Header } 1swKUX//Kw/YU+h7aD0erg
 
-require 'MushBasePrism.rb'
-require 'MushConfig.rb'
-require 'MushDisplacement.rb'
-require 'MushEvent.rb'
-require 'MushEventTimer.rb'
-require 'MushExtruder.rb'
-# require 'MushGame.rb'
-require 'MushGLFont.rb'
-require 'MushGLTexture.rb'
-require 'MushHelpers.rb'
-require 'MushKeys.rb'
-require 'MushMaterial.rb'
-require 'MushMenu.rb'
-require 'MushMesh.rb'
-require 'MushPiece.rb'
-require 'MushPost.rb'
-require 'MushRegistered.rb'
-require 'MushRotation.rb'
-require 'MushTools.rb'
-require 'MushVector.rb'
+module MushRegistered
+  def mushRegistered_install
+    class_eval(<<-EOS, __FILE__, __LINE__+1)
+      @@registeredObjects = {}
+      def self.cRegisteredCreate
+        object = new
+        @@registeredObjects[object] = object
+        object
+      end
+      
+      def mRegisteredDestroy
+        @@registeredObjects.delete self
+      end
+    EOS
+  end
+end
+
