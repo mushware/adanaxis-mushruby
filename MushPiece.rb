@@ -50,7 +50,10 @@
 #- Implemetation file:doxygen/class_mush_mesh_posticity.html
 
 class MushPiece < MushObject
-
+  def initialize
+    @m_post = MushPost.new
+    @m_expireFlag = false
+  end
 
   def mHandle(event)
     raise TypeError.new("Unhandled message #{event.class} in #{self.class}")
