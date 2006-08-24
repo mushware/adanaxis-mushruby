@@ -1,7 +1,7 @@
 #%Header {
 ##############################################################################
 #
-# File data-adanaxis/mushruby/MushEvent.rb
+# File data-adanaxis/mushruby/MushError.rb
 #
 # Author Andy Southgate 2006
 #
@@ -17,16 +17,9 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } X5s8C2MaUiV+3T55nvieig
-# $Id: MushEvent.rb,v 1.1 2006/08/17 08:57:10 southa Exp $
-# $Log: MushEvent.rb,v $
-# Revision 1.1  2006/08/17 08:57:10  southa
-# Event handling
-#
+#%Header } MpISbYnVKuwboQJJcpXJnw
+# $Id$
+# $Log$
 
-class MushEvent < MushObject
-  def initialize
-  end
-  
-  attr_accessor :src, :dest
+class MushError < Exception
 end
