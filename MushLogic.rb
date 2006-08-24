@@ -1,7 +1,7 @@
 #%Header {
 ##############################################################################
 #
-# File data-adanaxis/mushruby/MushPiece.rb
+# File data-adanaxis/mushruby/MushLogic.rb
 #
 # Author Andy Southgate 2006
 #
@@ -17,47 +17,10 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } IbOgoniOlrZVt52ex79DlA
-# Class: MushPiece
-#
-# Description:
-#
-# This object contains a reference to a game piece.
-#
-# Method: new
-#
-# Creates a new MushPost object.  
-#
-# Parameters:
-#
-# type - Name of the type to use
-#
-# Returns:
-#
-# New MushPiece object
-#
-# Default:
-#
-# There is no default constructor.
-#
-# Example:
-#
-# (example)
-# (end)
-#
-# Group: Links
-#- Wrapper file:doxygen/class_mush_mesh_ruby_post.html
-#- Implemetation file:doxygen/class_mush_mesh_posticity.html
+#%Header } kutgWrjy2cpfxR53C+3nGA
+# $Id$
+# $Log$
 
-class MushPiece < MushObject
-  def initialize
-    @m_post = MushPost.new
-    @m_expireFlag = false
-  end
-  
-  attr_reader :m_id
-
-  def mHandle(event)
-    raise TypeError.new("Unhandled message #{event.class} in #{self.class}")
-  end
+class MushLogic < MushObject
 end
+
