@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } sfMMKoLuaimDvq9ZamQatQ
-# $Id: Mushware.rb,v 1.8 2006/08/24 13:04:36 southa Exp $
+# $Id: Mushware.rb,v 1.9 2006/08/24 16:30:55 southa Exp $
 # $Log: Mushware.rb,v $
+# Revision 1.9  2006/08/24 16:30:55  southa
+# Event handling
+#
 # Revision 1.8  2006/08/24 13:04:36  southa
 # Event handling
 #
@@ -54,5 +57,6 @@ require 'MushPiece.rb'
 require 'MushPost.rb'
 require 'MushRegistered.rb'
 require 'MushRotation.rb'
+require 'MushShaderLibrary.rb'
 require 'MushTools.rb'
 require 'MushVector.rb'
