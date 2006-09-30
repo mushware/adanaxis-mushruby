@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } sfMMKoLuaimDvq9ZamQatQ
-# $Id: Mushware.rb,v 1.9 2006/08/24 16:30:55 southa Exp $
+# $Id: Mushware.rb,v 1.10 2006/09/10 10:30:51 southa Exp $
 # $Log: Mushware.rb,v $
+# Revision 1.10  2006/09/10 10:30:51  southa
+# Shader billboarding
+#
 # Revision 1.9  2006/08/24 16:30:55  southa
 # Event handling
 #
@@ -59,4 +62,5 @@ require 'MushRegistered.rb'
 require 'MushRotation.rb'
 require 'MushShaderLibrary.rb'
 require 'MushTools.rb'
+require 'MushUtil.rb'
 require 'MushVector.rb'

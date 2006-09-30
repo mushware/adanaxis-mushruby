@@ -55,7 +55,11 @@ class MushPiece < MushObject
     @m_expireFlag = false
   end
   
-  attr_reader :m_id
+  attr_reader :m_id, :m_post
+
+  def mPostWRef
+    @m_post
+  end
 
   def mHandle(event)
     raise TypeError.new("Unhandled message #{event.class} in #{self.class}")
