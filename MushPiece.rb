@@ -50,11 +50,12 @@
 #- Implemetation file:doxygen/class_mush_mesh_posticity.html
 
 class MushPiece < MushObject
-  def initialize
-    @m_post = MushPost.new
+  def initialize(inParams = {})
+    @m_post = inParams[:post] || MushPost.new
+    @m_meshName = inParams[:mesh_name] || ""
     @m_expireFlag = false
   end
-  
+
   attr_reader :m_id, :m_post
 
   def mPostWRef

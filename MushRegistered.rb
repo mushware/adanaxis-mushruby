@@ -23,8 +23,8 @@ module MushRegistered
   def mushRegistered_install
     class_eval(<<-EOS, __FILE__, __LINE__+1)
       @@registeredObjects = {}
-      def self.cRegisteredCreate
-        object = new
+      def self.cRegisteredCreate(params=nil)
+        object = params ? new(params) : new
         @@registeredObjects[object] = object
         object
       end
