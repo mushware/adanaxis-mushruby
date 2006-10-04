@@ -51,6 +51,12 @@
 
 class MushPiece < MushObject
   def initialize(inParams = {})
+    raise "#{self.class} didn't set @m_defaultType before calling super" unless @m_defaultType
+    type = inParams[:type] || @m_defaultType
+    idSuffix = inParams[:id_suffix]
+    
+    @m_id = "#{type}:#{idSuffix}"
+    
     @m_post = inParams[:post] || MushPost.new
     @m_meshName = inParams[:mesh_name] || ""
     @m_expireFlag = false
