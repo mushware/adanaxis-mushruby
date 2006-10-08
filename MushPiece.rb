@@ -60,6 +60,7 @@ class MushPiece < MushObject
     @m_post = inParams[:post] || MushPost.new
     @m_meshName = inParams[:mesh_name] || ""
     @m_expireFlag = false
+    @m_hitPoints = inParams[:hit_points] || 0.0
   end
 
   attr_reader :m_id, :m_post
