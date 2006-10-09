@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } sfMMKoLuaimDvq9ZamQatQ
-# $Id: Mushware.rb,v 1.10 2006/09/10 10:30:51 southa Exp $
+# $Id: Mushware.rb,v 1.11 2006/09/30 13:46:32 southa Exp $
 # $Log: Mushware.rb,v $
+# Revision 1.11  2006/09/30 13:46:32  southa
+# Seek and patrol
+#
 # Revision 1.10  2006/09/10 10:30:51  southa
 # Shader billboarding
 #
@@ -44,7 +47,7 @@ require 'MushConfig.rb'
 require 'MushDisplacement.rb'
 require 'MushError.rb'
 require 'MushEvent.rb'
-require 'MushEventTimer.rb'
+require 'MushEvents.rb'
 require 'MushExtruder.rb'
 # require 'MushGame.rb'
 require 'MushGLFont.rb'
