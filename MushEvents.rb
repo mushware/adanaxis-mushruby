@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } d7jyV7hPEwSRQCEPyKVK4w
-# $Id: MushEventTimer.rb,v 1.1 2006/08/17 08:57:10 southa Exp $
-# $Log: MushEventTimer.rb,v $
+# $Id: MushEvents.rb,v 1.1 2006/10/09 16:00:14 southa Exp $
+# $Log: MushEvents.rb,v $
+# Revision 1.1  2006/10/09 16:00:14  southa
+# Intern generation
+#
 # Revision 1.1  2006/08/17 08:57:10  southa
 # Event handling
 #
@@ -34,6 +37,6 @@ class MushEventTimer < MushEvent
 end
 
 class MushEventCollision < MushEvent
-  attr_accessor :other
-  attr_accessor :owner_id
+  attr_accessor :m_piece1
+  attr_accessor :m_piece2
 end
