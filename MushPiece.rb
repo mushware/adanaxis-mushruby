@@ -69,7 +69,7 @@ class MushPiece < MushObject
     @m_post
   end
 
-  def mHandle(event)
-    raise TypeError.new("Unhandled message #{event.class} in #{self.class}")
+  def mEventHandle(event)
+    MushLog.cWarning "Unhandled message #{event.class} in #{self.class}"
   end
 end

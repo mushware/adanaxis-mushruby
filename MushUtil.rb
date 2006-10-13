@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } G8/i/is1oqNZv+h/MjwG7A
-# $Id$
-# $Log$
+# $Id: MushUtil.rb,v 1.1 2006/09/30 13:46:32 southa Exp $
+# $Log: MushUtil.rb,v $
+# Revision 1.1  2006/09/30 13:46:32  southa
+# Seek and patrol
+#
 
 class MushUtil < MushObject
 # Class: MushUtil
@@ -109,5 +112,14 @@ class MushUtil < MushObject
       deceleration = 0 if deceleration < 0.0
       ioPost.velocity = ioPost.velocity * deceleration
     end
+  end
+  
+  def self.cIntervalTest(inLastMsec, inIntervalMsec)
+    timeNow = MushGame.cGameMsec
+    unless inLastMsec && (timeNow - inLastMsec ) < inIntervalMsec
+      retVal = timeNow
+      yield
+    end
+    retVal || inLastMsec
   end
 end
