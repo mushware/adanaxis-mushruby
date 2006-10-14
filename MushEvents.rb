@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } d7jyV7hPEwSRQCEPyKVK4w
-# $Id: MushEvents.rb,v 1.2 2006/10/12 22:04:45 southa Exp $
+# $Id: MushEvents.rb,v 1.3 2006/10/13 14:21:25 southa Exp $
 # $Log: MushEvents.rb,v $
+# Revision 1.3  2006/10/13 14:21:25  southa
+# Collision handling
+#
 # Revision 1.2  2006/10/12 22:04:45  southa
 # Collision events
 #
@@ -40,10 +43,7 @@ class MushEventTimer < MushEvent
 end
 
 class MushEventCollision < MushEvent
-  attr_accessor :m_piece1
-  attr_accessor :m_piece2
-  attr_accessor :m_chunkNum1
-  attr_accessor :m_chunkNum2
+  mush_accessor :m_piece1, :m_piece2, :m_chunkNum1, :m_chunkNum2
   
   def mPiecesSwap!
     @m_piece1, @m_piece2 = @m_piece2, @m_piece1

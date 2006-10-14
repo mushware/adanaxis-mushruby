@@ -1,7 +1,7 @@
 #%Header {
 ##############################################################################
 #
-# File data-adanaxis/mushruby/MushEvent.rb
+# File data-adanaxis/mushruby/MushObject.rb
 #
 # Author Andy Southgate 2006
 #
@@ -17,21 +17,43 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } X5s8C2MaUiV+3T55nvieig
-# $Id: MushEvent.rb,v 1.2 2006/08/24 16:30:55 southa Exp $
-# $Log: MushEvent.rb,v $
-# Revision 1.2  2006/08/24 16:30:55  southa
-# Event handling
-#
-# Revision 1.1  2006/08/17 08:57:10  southa
-# Event handling
-#
+#%Header } RHvx/S3n0N3LZVGpVv2KdA
+# $Id$
+# $Log$
 
-require 'MushObject.rb'
+class MushObject
+  def self.mush_reader(*inArgs)
+    inArgs.each do |arg|
+      argName = arg.to_s
+      
+      if argName.sub!(/^m_/, "m")
+        argName[1, 1] = argName[1, 1].upcase
+      end
+      class_eval(<<-EOS, __FILE__, __LINE__+1)
+        def #{argName}
+          @#{arg}
+        end
+EOS
+    end
+  end
 
-class MushEvent < MushObject
-  def initialize
+  def self.mush_writer(*inArgs)
+    inArgs.each do |arg|
+      argName = arg.to_s
+      
+      if argName.sub!(/^m_/, "m")
+        argName[1, 1] = argName[1, 1].upcase
+      end
+      class_eval(<<-EOS, __FILE__, __LINE__+1)
+        def #{argName}Set(inParam)
+          @#{arg} = inParam
+        end
+EOS
+    end
   end
   
-  attr_accessor :src, :dest
+  def self.mush_accessor(*inArgs)
+    mush_reader(*inArgs)
+    mush_writer(*inArgs)
+  end
 end

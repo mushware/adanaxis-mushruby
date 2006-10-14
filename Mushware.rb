@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } sfMMKoLuaimDvq9ZamQatQ
-# $Id: Mushware.rb,v 1.11 2006/09/30 13:46:32 southa Exp $
+# $Id: Mushware.rb,v 1.12 2006/10/09 16:00:14 southa Exp $
 # $Log: Mushware.rb,v $
+# Revision 1.12  2006/10/09 16:00:14  southa
+# Intern generation
+#
 # Revision 1.11  2006/09/30 13:46:32  southa
 # Seek and patrol
 #
@@ -59,6 +62,7 @@ require 'MushLogic.rb'
 require 'MushMaterial.rb'
 require 'MushMenu.rb'
 require 'MushMesh.rb'
+require 'MushObject.rb'
 require 'MushPiece.rb'
 require 'MushPost.rb'
 require 'MushRegistered.rb'

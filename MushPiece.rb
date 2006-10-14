@@ -65,11 +65,24 @@ class MushPiece < MushObject
 
   attr_reader :m_id, :m_post
 
+  mush_accessor :m_hitPoints
+
   def mPostWRef
     @m_post
   end
 
   def mEventHandle(event)
     MushLog.cWarning "Unhandled message #{event.class} in #{self.class}"
+  end
+  
+  def mFatalCollisionHandle(event)
+    @m_expireFlag = true
+  end
+
+  def mCollisionHandle(event)
+    if @m_hitPoints <= 0.0 && !@m_expireFlag
+      @m_expireFlag = true
+      mFatalCollisionHandle(event)
+    end
   end
 end
