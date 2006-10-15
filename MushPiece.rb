@@ -61,11 +61,14 @@ class MushPiece < MushObject
     @m_meshName = inParams[:mesh_name] || ""
     @m_expireFlag = false
     @m_hitPoints = inParams[:hit_points] || 0.0
+    @m_renderScale = inParams[:render_scale] || 1.0
+    unless @m_renderScale.kind_of?(MushVector)
+      @m_renderScale = MushVector.new(@m_renderScale, @m_renderScale, @m_renderScale, @m_renderScale)
+    end
   end
 
-  attr_reader :m_id, :m_post
-
-  mush_accessor :m_hitPoints
+  mush_reader :m_id
+  mush_accessor :m_post, :m_hitPoints
 
   def mPostWRef
     @m_post
