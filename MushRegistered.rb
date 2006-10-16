@@ -25,12 +25,23 @@ module MushRegistered
       @@registeredObjects = {}
       def self.cRegisteredCreate(params=nil)
         object = params ? new(params) : new
-        @@registeredObjects[object] = object
+        
+        if @@registeredObjects.has_key?(object_id)
+          puts "Attempt to register object twice \#{object.object_id} => \#{object.inspect}"
+        end
+        
+        @@registeredObjects[object.object_id] = object
+        #puts "Registering \#{object.object_id}"
         object
       end
-      
+  
       def mRegisteredDestroy
-        @@registeredObjects.delete self
+        #puts "Unregistering \#{self.object_id}"
+        unless @@registeredObjects.has_key?(object_id)
+          raise RuntimeError, "Attempt to destroy unregistered object \#{self.object_id} => \#{self.inspect}"
+        end
+        @@registeredObjects.delete object_id
+        # GC.start if $MUSHCONFIG['DEBUG']
       end
     EOS
   end
