@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } d7jyV7hPEwSRQCEPyKVK4w
-# $Id: MushEvents.rb,v 1.3 2006/10/13 14:21:25 southa Exp $
+# $Id: MushEvents.rb,v 1.4 2006/10/14 16:59:43 southa Exp $
 # $Log: MushEvents.rb,v $
+# Revision 1.4  2006/10/14 16:59:43  southa
+# Ruby Deco objects
+#
 # Revision 1.3  2006/10/13 14:21:25  southa
 # Collision handling
 #
@@ -49,4 +52,7 @@ class MushEventCollision < MushEvent
     @m_piece1, @m_piece2 = @m_piece2, @m_piece1
     @m_chunkNum1, @m_chunkNum2 = @m_chunkNum2, @m_chunkNum1
   end
+end
+
+class MushEventExpiry < MushEvent
 end
