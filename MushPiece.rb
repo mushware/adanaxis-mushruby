@@ -60,7 +60,8 @@ class MushPiece < MushObject
     @m_post = inParams[:post] || MushPost.new
     @m_meshName = inParams[:mesh_name] || ""
     @m_expireFlag = false
-    @m_hitPoints = inParams[:hit_points] || 0.0
+    @m_hitPoints = Float(inParams[:hit_points] || 0.0)
+    @m_originalHitPoints = @m_hitPoints
     @m_renderScale = inParams[:render_scale] || 1.0
     unless @m_renderScale.kind_of?(MushVector)
       @m_renderScale = MushVector.new(@m_renderScale, @m_renderScale, @m_renderScale, @m_renderScale)
@@ -74,8 +75,18 @@ class MushPiece < MushObject
     @m_post
   end
 
+  def mHitPointRatio
+    @m_hitPoints / @m_originalHitPoints
+  end
+
   def mEventHandle(event)
-    MushLog.cWarning "Unhandled message #{event.class} in #{self.class}"
+    retVal = nil
+    case event
+      when MushEventCollision: mCollisionHandle(event)
+      when MushEventExpiry: mExpiryHandle(event)
+      else MushLog.cWarning "Unhandled message #{event.class} in #{self.class}"
+    end
+    retVal || @m_callInterval
   end
   
   def mFatalCollisionHandle(event)
@@ -88,4 +99,8 @@ class MushPiece < MushObject
       mFatalCollisionHandle(event)
     end
   end
+  
+  def mExpiryHandle
+  end
+  
 end

@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } sfMMKoLuaimDvq9ZamQatQ
-# $Id: Mushware.rb,v 1.12 2006/10/09 16:00:14 southa Exp $
+# $Id: Mushware.rb,v 1.13 2006/10/14 16:59:43 southa Exp $
 # $Log: Mushware.rb,v $
+# Revision 1.13  2006/10/14 16:59:43  southa
+# Ruby Deco objects
+#
 # Revision 1.12  2006/10/09 16:00:14  southa
 # Intern generation
 #
@@ -47,6 +50,7 @@
 
 require 'MushBasePrism.rb'
 require 'MushConfig.rb'
+require 'MushDashboard.rb'
 require 'MushDisplacement.rb'
 require 'MushError.rb'
 require 'MushEvent.rb'
@@ -71,3 +75,4 @@ require 'MushShaderLibrary.rb'
 require 'MushTools.rb'
 require 'MushUtil.rb'
 require 'MushVector.rb'
+require 'MushView.rb'
