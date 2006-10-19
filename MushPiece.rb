@@ -100,7 +100,7 @@ class MushPiece < MushObject
     end
   end
   
-  def mExpiryHandle
+  def mExpiryHandle(event)
   end
   
 end
