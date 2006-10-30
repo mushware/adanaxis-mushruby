@@ -66,13 +66,20 @@ class MushPiece < MushObject
     unless @m_renderScale.kind_of?(MushVector)
       @m_renderScale = MushVector.new(@m_renderScale, @m_renderScale, @m_renderScale, @m_renderScale)
     end
+    @m_doesDamage = true
+    @m_vulnerable = true
+    @m_creationMsec = MushGame.cGameMsec
   end
 
-  mush_reader :m_id
-  mush_accessor :m_post, :m_hitPoints
+  mush_reader :m_id, :m_originalHitPoints
+  mush_accessor :m_post, :m_expireFlag, :m_hitPoints, :m_doesDamage, :m_vulnerable
 
   def mPostWRef
     @m_post
+  end    
+
+  def mAgeMsec
+    return MushGame.cGameMsec - @m_creationMsec
   end
 
   def mHitPointRatio
