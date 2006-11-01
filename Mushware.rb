@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } sfMMKoLuaimDvq9ZamQatQ
-# $Id: Mushware.rb,v 1.13 2006/10/14 16:59:43 southa Exp $
+# $Id: Mushware.rb,v 1.14 2006/10/17 15:27:59 southa Exp $
 # $Log: Mushware.rb,v $
+# Revision 1.14  2006/10/17 15:27:59  southa
+# Player collisions
+#
 # Revision 1.13  2006/10/14 16:59:43  southa
 # Ruby Deco objects
 #
@@ -72,6 +75,7 @@ require 'MushPost.rb'
 require 'MushRegistered.rb'
 require 'MushRotation.rb'
 require 'MushShaderLibrary.rb'
+require 'MushTimedValue.rb'
 require 'MushTools.rb'
 require 'MushUtil.rb'
 require 'MushVector.rb'
