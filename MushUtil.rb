@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } G8/i/is1oqNZv+h/MjwG7A
-# $Id: MushUtil.rb,v 1.1 2006/09/30 13:46:32 southa Exp $
+# $Id: MushUtil.rb,v 1.2 2006/10/13 14:21:25 southa Exp $
 # $Log: MushUtil.rb,v $
+# Revision 1.2  2006/10/13 14:21:25  southa
+# Collision handling
+#
 # Revision 1.1  2006/09/30 13:46:32  southa
 # Seek and patrol
 #
@@ -112,6 +115,9 @@ class MushUtil < MushObject
       deceleration = 0 if deceleration < 0.0
       ioPost.velocity = ioPost.velocity * deceleration
     end
+    
+    # Return true if aiming at the targer
+    return accelerate
   end
   
   def self.cIntervalTest(inLastMsec, inIntervalMsec)
