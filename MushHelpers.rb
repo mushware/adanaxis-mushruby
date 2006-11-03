@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } bU2xndfLageIWNYt4Lzsvw
-# $Id: MushHelpers.rb,v 1.2 2006/08/01 13:41:07 southa Exp $
+# $Id: MushHelpers.rb,v 1.3 2006/08/01 17:21:12 southa Exp $
 # $Log: MushHelpers.rb,v $
+# Revision 1.3  2006/08/01 17:21:12  southa
+# River demo
+#
 # Revision 1.2  2006/08/01 13:41:07  southa
 # Pre-release updates
 #
@@ -28,5 +31,13 @@
 class Array
   def cToPrint
     '['+join(', ')+']'
+  end
+end
+
+class Numeric
+  def mClamp(inMin, inMax)
+    return inMin if self < inMin
+    return inMax if self > inMax
+    return self
   end
 end

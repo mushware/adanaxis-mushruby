@@ -67,16 +67,21 @@ class MushPiece < MushObject
       @m_renderScale = MushVector.new(@m_renderScale, @m_renderScale, @m_renderScale, @m_renderScale)
     end
     @m_damageFactor = 1.0
-    @m_vulnerability = 1.0
+    @m_vulnerability = inParams[:vulnerability] || 1.0
     @m_creationMsec = MushGame.cGameMsec
   end
 
   mush_reader :m_id, :m_originalHitPoints
-  mush_accessor :m_post, :m_expireFlag, :m_hitPoints, :m_damageFactor, :m_vulnerability
+  mush_writer :m_damageFactor
+  mush_accessor :m_post, :m_expireFlag, :m_hitPoints, :m_vulnerability
 
   def mPostWRef
     @m_post
   end    
+
+  def mDamageFactor(inPiece)
+    return @m_damageFactor
+  end
 
   def mAgeMsec
     return MushGame.cGameMsec - @m_creationMsec
