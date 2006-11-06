@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } PtLZvZtzd9aRiKZ8J3BOaQ
-# $Id: MushConfig.rb,v 1.3 2006/08/01 13:41:06 southa Exp $
+# $Id: MushConfig.rb,v 1.4 2006/08/01 17:21:11 southa Exp $
 # $Log: MushConfig.rb,v $
+# Revision 1.4  2006/08/01 17:21:11  southa
+# River demo
+#
 # Revision 1.3  2006/08/01 13:41:06  southa
 # Pre-release updates
 #
@@ -30,6 +33,9 @@ class MushConfig
 
   def self.cApplPath
     $MUSHCONFIG['APPLPATH']
+  end
+  def self.cGlobalMushPath
+    $MUSHCONFIG['APPLPATH']+"/mush"
   end
   def self.cGlobalPixelsPath
     $MUSHCONFIG['APPLPATH']+"/pixels"
