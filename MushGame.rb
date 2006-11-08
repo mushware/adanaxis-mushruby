@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } BE+JCzTHZq0IXlCcJa0Law
-# $Id: MushGame.rb,v 1.3 2006/08/01 13:41:07 southa Exp $
+# $Id: MushGame.rb,v 1.4 2006/08/01 17:21:12 southa Exp $
 # $Log: MushGame.rb,v $
+# Revision 1.4  2006/08/01 17:21:12  southa
+# River demo
+#
 # Revision 1.3  2006/08/01 13:41:07  southa
 # Pre-release updates
 #
@@ -32,13 +35,13 @@ class MushGame < MushObject
 # This object supplies a number of utility functions used to control the underlying
 # game.
 #
-# Method: cKeySymbolToName
+# Method: cKeySymbolsToName
 #
-# Provide the name string corresponding to a key value.  
+# Provide the name string corresponding to a key value or values.  
 #
 # Parameters:
 #
-# key value - Key value - one of the key values from MushKeys.
+# key value - Key value - one or an array of the key values from MushKeys.
 #
 # Returns:
 #

@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } TVAlCE/bR+J6ZLEFw8GJ3Q
-# $Id: MushMenu.rb,v 1.7 2006/08/01 13:41:07 southa Exp $
+# $Id: MushMenu.rb,v 1.8 2006/08/01 17:21:13 southa Exp $
 # $Log: MushMenu.rb,v $
+# Revision 1.8  2006/08/01 17:21:13  southa
+# River demo
+#
 # Revision 1.7  2006/08/01 13:41:07  southa
 # Pre-release updates
 #
@@ -49,7 +52,7 @@ class MushMenu
   attr_accessor :title, :menu, :font, :size, :spacing, :current, :colour, :highlight_colour, :title_colour, :leftright
 
   def mRender(msec)
-    xCoord = -0.4
+    xCoord = -0.42
     
     newYCoord = @current * @size * @spacing + YCOORD_CENTRE
     newYCoord = YCOORD_DEFAULT if newYCoord < YCOORD_DEFAULT
