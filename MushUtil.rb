@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } G8/i/is1oqNZv+h/MjwG7A
-# $Id: MushUtil.rb,v 1.2 2006/10/13 14:21:25 southa Exp $
+# $Id: MushUtil.rb,v 1.3 2006/11/01 13:04:20 southa Exp $
 # $Log: MushUtil.rb,v $
+# Revision 1.3  2006/11/01 13:04:20  southa
+# Initial weapon handling
+#
 # Revision 1.2  2006/10/13 14:21:25  southa
 # Collision handling
 #
@@ -69,7 +72,7 @@ class MushUtil < MushObject
     deltaVelocity = MushVector.new(0, 0, 0, -1)
     ioPost.angular_position.mRotate(deltaVelocity)
 
-    # Generate the dot product of vector to target and direction we;re facing,
+    # Generate the dot product of vector to target and direction we're facing,
     # both normalised
     normDotProd = deltaVelocity.mInnerProduct(vecToTarget) / distToTarget
     
@@ -84,7 +87,7 @@ class MushUtil < MushObject
       ioPost.angular_velocity = angVel
     end
     
-    # Merge the two rotations.  Values are chose to provide stability at call interval of 100
+    # Merge the two rotations.  Values are chosen to provide stability at call interval of 100
     ioPost.angular_velocity = MushTools::cSlerp(
       ioPost.angular_velocity,
       partialRotation,
@@ -110,7 +113,7 @@ class MushUtil < MushObject
       
       ioPost.velocity = ioPost.velocity * (1.0 - inAcceleration) + deltaVelocity * inAcceleration;
     else
-      # Decelerating harderthan acceleration, to maintain stability
+      # Decelerating harder than acceleration, to maintain stability
       deceleration = 1.0 - 4.0 * inAcceleration
       deceleration = 0 if deceleration < 0.0
       ioPost.velocity = ioPost.velocity * deceleration
@@ -118,6 +121,39 @@ class MushUtil < MushObject
     
     # Return true if aiming at the targer
     return accelerate
+  end
+  
+  def self.cMissileSeek(ioPost, inTarget, inSpeed, inAcceleration)
+    # New angular velocity is a slerp between the current angular
+    # velocity and a fraction of the rotation required to rotate
+    # the current angular position to point at the target
+    
+    vecToTarget = inTarget - ioPost.position
+    distToTarget = vecToTarget.mMagnitude
+    deltaVelocity = MushVector.new(0, 0, 0, -1)
+    ioPost.angular_position.mRotate(deltaVelocity)
+
+    # Generate the dot product of vector to target and direction we're facing,
+    # both normalised
+    normDotProd = deltaVelocity.mInnerProduct(vecToTarget) / distToTarget
+    
+    # Calculate the rotation that (if applied 1/inAcceleration times) would
+    # turn the object to face the target
+    partialRotation = MushTools.cTurnToFace(ioPost, inTarget, inAcceleration)
+    
+    angPos = ioPost.angular_position
+    vel = ioPost.velocity
+    partialRotation.mRotate(angPos)
+    partialRotation.mRotate(vel)
+    ioPost.velocity = vel
+    ioPost.angular_position = angPos
+    
+    onTarget = false
+    if (normDotProd > 0.9)
+      onTarget = true
+    end
+    # Return true if aiming at the target
+    return onTarget
   end
   
   def self.cIntervalTest(inLastMsec, inIntervalMsec)
