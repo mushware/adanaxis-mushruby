@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } p8fMYjW3s0cDa/sAdyjJNg
-# $Id: MushGLTexture.rb,v 1.3 2006/08/01 13:41:07 southa Exp $
+# $Id: MushGLTexture.rb,v 1.4 2006/08/01 17:21:12 southa Exp $
 # $Log: MushGLTexture.rb,v $
+# Revision 1.4  2006/08/01 17:21:12  southa
+# River demo
+#
 # Revision 1.3  2006/08/01 13:41:07  southa
 # Pre-release updates
 #
@@ -87,7 +90,7 @@ class MushGLTexture
 #   :octaveratio   => 0.5)
 # (end)
 #
-# Method: cPreCache
+# Method: cPrecache
 #
 # Loads a texture into memory.  Usually, textures will load when they are first
 # used.  This function loads the names textured immediately, prevently a delay
@@ -104,7 +107,7 @@ class MushGLTexture
 # Example:
 #
 # (example)
-# MushGLTexture::cPreCache('attendant-tex')
+# MushGLTexture::cPrecache('attendant-tex')
 # (end)
 #
 # Group: Links
@@ -114,7 +117,7 @@ class MushGLTexture
     cRubyDefine(paramHash);
   end
 
-  def self.cPreCache(texName)
-    cRubyPreCache(texName);
+  def self.cPrecache(texName)
+    cRubyPrecache(texName);
   end
 end
