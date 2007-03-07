@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } TVAlCE/bR+J6ZLEFw8GJ3Q
-# $Id: MushMenu.rb,v 1.8 2006/08/01 17:21:13 southa Exp $
+# $Id: MushMenu.rb,v 1.9 2006/11/08 18:30:53 southa Exp $
 # $Log: MushMenu.rb,v $
+# Revision 1.9  2006/11/08 18:30:53  southa
+# Key and axis configuration
+#
 # Revision 1.8  2006/08/01 17:21:13  southa
 # River demo
 #
@@ -31,6 +34,7 @@ class MushMenu
   MENU_STRING = 0
   MENU_SYMBOL = 1
   MENU_PARAM = 2
+  MENU_FLAGS = 3
   
   YCOORD_DEFAULT = 0.22
   YCOORD_CENTRE = -0.18
@@ -44,6 +48,7 @@ class MushMenu
     @current = 0
     @colour = params[:colour] || MushVector.new(1,1,1,0.3)
     @highlight_colour = params[:highlight_colour] || MushVector.new(1,1,1,1)
+    @m_grey_colour = params[:grey_colour] || MushVector.new(1,1,1,0.1)
     @title_colour = params[:title_colour] || MushVector.new(1,1,1,1)
     @yCoord = YCOORD_DEFAULT
     @leftright = params[:leftright] || false
@@ -67,13 +72,16 @@ class MushMenu
     end
     
     @menu.each_index do |i|
-      if i == @current
+      item = @menu[i]
+      
+      if item[MENU_FLAGS] && item[MENU_FLAGS][:grey]
+        @font.colour = @m_grey_colour
+      elsif i == @current
         @font.colour = @highlight_colour
       else
         @font.colour = @colour      
       end
-      
-      item = @menu[i]
+
       @font.mRenderAtSize(item[MENU_STRING], xCoord, yCoord, @size)
       yCoord -= @size * @spacing
     end
@@ -94,11 +102,19 @@ class MushMenu
   end
   
   def mUp
-    @current = (@current + @menu.size - 1) % @menu.size
+    @menu.size.times do
+      @current = (@current + @menu.size - 1) % @menu.size
+      item = @menu[@current]
+      break unless item[MENU_FLAGS] && item[MENU_FLAGS][:grey]
+    end
   end
     
   def mDown
-    @current = (@current + 1) % @menu.size
+    @menu.size.times do
+      @current = (@current + 1) % @menu.size
+      item = @menu[@current]
+      break unless item[MENU_FLAGS] && item[MENU_FLAGS][:grey]
+    end
   end
     
   def mEnter(obj)
