@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } BE+JCzTHZq0IXlCcJa0Law
-# $Id: MushGame.rb,v 1.4 2006/08/01 17:21:12 southa Exp $
+# $Id: MushGame.rb,v 1.5 2006/11/08 18:30:53 southa Exp $
 # $Log: MushGame.rb,v $
+# Revision 1.5  2006/11/08 18:30:53  southa
+# Key and axis configuration
+#
 # Revision 1.4  2006/08/01 17:21:12  southa
 # River demo
 #
@@ -28,6 +31,12 @@
 #
 
 class MushGame < MushObject
+  GAMERESULT_INVALID=0
+  GAMERESULT_NONE=1
+  GAMERESULT_DEAD=2
+  GAMERESULT_LOST=3
+  GAMERESULT_WON=4
+
 # Class: MushGame
 #
 # Description:
