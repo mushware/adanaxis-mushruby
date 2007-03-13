@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushKeys.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } g0mMh811UVLIFUNMQ+JhlQ
-# $Id: MushKeys.rb,v 1.4 2006/08/01 13:41:07 southa Exp $
+#%Header } 6lAn5OV2LkFNYaQyS65cjw
+# $Id: MushKeys.rb,v 1.5 2006/08/01 17:21:13 southa Exp $
 # $Log: MushKeys.rb,v $
+# Revision 1.5  2006/08/01 17:21:13  southa
+# River demo
+#
 # Revision 1.4  2006/08/01 13:41:07  southa
 # Pre-release updates
 #

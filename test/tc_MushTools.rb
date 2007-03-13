@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/test/tc_MushTools.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } itd+pxlH7HQ2HUiS8/8Q/g
-# $Id: tc_MushTools.rb,v 1.2 2006/08/01 13:41:10 southa Exp $
+#%Header } ZdPeZr1LHEhMVZ+sCn4S6g
+# $Id: tc_MushTools.rb,v 1.3 2006/08/01 17:21:16 southa Exp $
 # $Log: tc_MushTools.rb,v $
+# Revision 1.3  2006/08/01 17:21:16  southa
+# River demo
+#
 # Revision 1.2  2006/08/01 13:41:10  southa
 # Pre-release updates
 #

@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushPiece.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,7 +17,7 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } IbOgoniOlrZVt52ex79DlA
+#%Header } 9qG9yIBb+iRNrRYsV67wSw
 # Class: MushPiece
 #
 # Description:

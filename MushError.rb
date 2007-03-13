@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushError.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } MpISbYnVKuwboQJJcpXJnw
-# $Id$
-# $Log$
+#%Header } NEkWdTzbWrBLu+PixEKxTQ
+# $Id: MushError.rb,v 1.1 2006/08/24 16:30:54 southa Exp $
+# $Log: MushError.rb,v $
+# Revision 1.1  2006/08/24 16:30:54  southa
+# Event handling
+#
 
 class MushError < Exception
 end

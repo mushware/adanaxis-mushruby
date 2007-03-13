@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushEventTimer.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } QvYyAPwRqishgI9dV3W3FA
-# $Id$
-# $Log$
+#%Header } bNnpVFRsduy1ul6b+llLYw
+# $Id: MushEventTimer.rb,v 1.1 2006/08/17 08:57:10 southa Exp $
+# $Log: MushEventTimer.rb,v $
+# Revision 1.1  2006/08/17 08:57:10  southa
+# Event handling
+#
 
 require 'MushEvent.rb'
 

@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushUtil.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } G8/i/is1oqNZv+h/MjwG7A
-# $Id: MushUtil.rb,v 1.3 2006/11/01 13:04:20 southa Exp $
+#%Header } hcqafjSrDMKP6ZqY94zgCw
+# $Id: MushUtil.rb,v 1.4 2006/11/12 20:09:54 southa Exp $
 # $Log: MushUtil.rb,v $
+# Revision 1.4  2006/11/12 20:09:54  southa
+# Missile guidance
+#
 # Revision 1.3  2006/11/01 13:04:20  southa
 # Initial weapon handling
 #

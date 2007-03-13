@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushGame.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } BE+JCzTHZq0IXlCcJa0Law
-# $Id: MushGame.rb,v 1.5 2006/11/08 18:30:53 southa Exp $
+#%Header } xMtGbQ1HBg2jLSq/6crVeg
+# $Id: MushGame.rb,v 1.6 2007/03/09 11:29:11 southa Exp $
 # $Log: MushGame.rb,v $
+# Revision 1.6  2007/03/09 11:29:11  southa
+# Game end actions
+#
 # Revision 1.5  2006/11/08 18:30:53  southa
 # Key and axis configuration
 #

@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushDashboard.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } bKXoRwPJsVquhMPZgS0/lA
-# $Id$
-# $Log$
+#%Header } PbqPiZUUuKEhEXOekJ3rbA
+# $Id: MushDashboard.rb,v 1.1 2006/10/17 15:27:59 southa Exp $
+# $Log: MushDashboard.rb,v $
+# Revision 1.1  2006/10/17 15:27:59  southa
+# Player collisions
+#
 
 require 'MushObject.rb'
 

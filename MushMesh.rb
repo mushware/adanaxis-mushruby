@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushMesh.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } rgDp43nH+M8aNq9yI8rD9Q
-# $Id: MushMesh.rb,v 1.3 2006/08/01 13:41:08 southa Exp $
+#%Header } GhBdqRwYlX0oK8a2LJiNVg
+# $Id: MushMesh.rb,v 1.4 2006/08/01 17:21:13 southa Exp $
 # $Log: MushMesh.rb,v $
+# Revision 1.4  2006/08/01 17:21:13  southa
+# River demo
+#
 # Revision 1.3  2006/08/01 13:41:08  southa
 # Pre-release updates
 #

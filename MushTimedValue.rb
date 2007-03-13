@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushTimedValue.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } dN1TWaZITfApRNAOJXTk7Q
-# $Id$
-# $Log$
+#%Header } vEjosFGeVKTj1+Ow9yQuyA
+# $Id: MushTimedValue.rb,v 1.1 2006/11/01 10:07:12 southa Exp $
+# $Log: MushTimedValue.rb,v $
+# Revision 1.1  2006/11/01 10:07:12  southa
+# Shield handling
+#
 
 require 'MushGame.rb'
 

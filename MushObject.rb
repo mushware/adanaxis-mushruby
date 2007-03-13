@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushObject.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } RHvx/S3n0N3LZVGpVv2KdA
-# $Id$
-# $Log$
+#%Header } SJ9+G4oCDgIWjjo6kieD0g
+# $Id: MushObject.rb,v 1.1 2006/10/14 16:59:43 southa Exp $
+# $Log: MushObject.rb,v $
+# Revision 1.1  2006/10/14 16:59:43  southa
+# Ruby Deco objects
+#
 
 class MushObject
   def self.mush_reader(*inArgs)

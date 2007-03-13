@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/Mushware.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } sfMMKoLuaimDvq9ZamQatQ
-# $Id: Mushware.rb,v 1.14 2006/10/17 15:27:59 southa Exp $
+#%Header } l07RxdC2sydahadB3UqArQ
+# $Id: Mushware.rb,v 1.15 2006/11/01 10:07:12 southa Exp $
 # $Log: Mushware.rb,v $
+# Revision 1.15  2006/11/01 10:07:12  southa
+# Shield handling
+#
 # Revision 1.14  2006/10/17 15:27:59  southa
 # Player collisions
 #

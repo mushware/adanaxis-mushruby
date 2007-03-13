@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushEvents.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } d7jyV7hPEwSRQCEPyKVK4w
-# $Id: MushEvents.rb,v 1.4 2006/10/14 16:59:43 southa Exp $
+#%Header } 8QxVWy3fHAjg0CgzVz0hFg
+# $Id: MushEvents.rb,v 1.5 2006/10/17 11:05:54 southa Exp $
 # $Log: MushEvents.rb,v $
+# Revision 1.5  2006/10/17 11:05:54  southa
+# Expiry events
+#
 # Revision 1.4  2006/10/14 16:59:43  southa
 # Ruby Deco objects
 #

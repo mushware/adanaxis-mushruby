@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushLog.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } 3UmfaamWVrfDVkvIiPX08Q
-# $Id$
-# $Log$
+#%Header } dX65UNMLQx8lP8gWj+AUvw
+# $Id: MushLog.rb,v 1.1 2006/08/24 16:30:55 southa Exp $
+# $Log: MushLog.rb,v $
+# Revision 1.1  2006/08/24 16:30:55  southa
+# Event handling
+#
 
 class MushLog
   def self.cError(*args)

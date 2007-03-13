@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushShaderLibrary.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,8 +17,8 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } WDrhJIBBc26bfLSjHrmINg
-# $Id$
+#%Header } gw5NodI1qjHLm6c8kWJMrA
+# $Id: MushShaderLibrary.rb,v 1.1 2006/09/10 10:30:51 southa Exp $
 # $Log
 
 class MushShaderLibrary < MushObject

@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/test/tc_MushBasePrism.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } VkUR8n39h0YRFei8Jt7TzA
-# $Id: tc_MushBasePrism.rb,v 1.2 2006/08/01 13:41:09 southa Exp $
+#%Header } GiWkghYSvEEU9v6vRHFl4Q
+# $Id: tc_MushBasePrism.rb,v 1.3 2006/08/01 17:21:14 southa Exp $
 # $Log: tc_MushBasePrism.rb,v $
+# Revision 1.3  2006/08/01 17:21:14  southa
+# River demo
+#
 # Revision 1.2  2006/08/01 13:41:09  southa
 # Pre-release updates
 #

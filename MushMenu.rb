@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushMenu.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } TVAlCE/bR+J6ZLEFw8GJ3Q
-# $Id: MushMenu.rb,v 1.9 2006/11/08 18:30:53 southa Exp $
+#%Header } ihs0nIVtJAvxJzlI/jrZZg
+# $Id: MushMenu.rb,v 1.10 2007/03/07 11:29:22 southa Exp $
 # $Log: MushMenu.rb,v $
+# Revision 1.10  2007/03/07 11:29:22  southa
+# Level permission
+#
 # Revision 1.9  2006/11/08 18:30:53  southa
 # Key and axis configuration
 #

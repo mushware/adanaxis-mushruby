@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/MushConfig.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } PtLZvZtzd9aRiKZ8J3BOaQ
-# $Id: MushConfig.rb,v 1.4 2006/08/01 17:21:11 southa Exp $
+#%Header } TVo9g64OZN8Np3GeD8zbXg
+# $Id: MushConfig.rb,v 1.5 2006/11/06 12:56:31 southa Exp $
 # $Log: MushConfig.rb,v $
+# Revision 1.5  2006/11/06 12:56:31  southa
+# MushFile work
+#
 # Revision 1.4  2006/08/01 17:21:11  southa
 # River demo
 #
@@ -31,20 +34,20 @@ class MushConfig
   def initialize
   end
 
-  def self.cApplPath
-    $MUSHCONFIG['APPLPATH']
+  def self.cResourcesPath
+    $MUSHCONFIG['RESOURCES_PATH']
   end
   def self.cGlobalMushPath
-    $MUSHCONFIG['APPLPATH']+"/mush"
+    $MUSHCONFIG['RESOURCES_PATH']+"/mush"
   end
   def self.cGlobalPixelsPath
-    $MUSHCONFIG['APPLPATH']+"/pixels"
+    $MUSHCONFIG['RESOURCES_PATH']+"/pixels"
   end
   def self.cGlobalSpacesPath
-    $MUSHCONFIG['APPLPATH']+"/spaces"
+    $MUSHCONFIG['RESOURCES_PATH']+"/spaces"
   end
   def self.cGlobalWavesPath
-    $MUSHCONFIG['APPLPATH']+"/waves"
+    $MUSHCONFIG['RESOURCES_PATH']+"/waves"
   end
 
 end

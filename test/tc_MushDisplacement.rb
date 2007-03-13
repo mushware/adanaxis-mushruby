@@ -3,7 +3,7 @@
 #
 # File data-adanaxis/mushruby/test/tc_MushDisplacement.rb
 #
-# Author Andy Southgate 2006
+# Author Andy Southgate 2006-2007
 #
 # This file contains original work by Andy Southgate.  The author and his
 # employer (Mushware Limited) irrevocably waive all of their copyright rights
@@ -17,9 +17,12 @@
 # This software carries NO WARRANTY of any kind.
 #
 ##############################################################################
-#%Header } T7Hvpd6sWmrhmjSnlJ7alw
-# $Id: tc_MushDisplacement.rb,v 1.2 2006/08/01 13:41:09 southa Exp $
+#%Header } LqbDCvC2raNdqZf8j69VTQ
+# $Id: tc_MushDisplacement.rb,v 1.3 2006/08/01 17:21:15 southa Exp $
 # $Log: tc_MushDisplacement.rb,v $
+# Revision 1.3  2006/08/01 17:21:15  southa
+# River demo
+#
 # Revision 1.2  2006/08/01 13:41:09  southa
 # Pre-release updates
 #
