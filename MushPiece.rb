@@ -91,8 +91,10 @@ class MushPiece < MushObject
     @m_hitPoints / @m_originalHitPoints
   end
 
-  def mDamageTake(inDamage)
-    @m_hitPoints -= inDamage * mVulnerability
+  def mDamageTake(inDamage, inPiece)
+    amount = inDamage * mVulnerability
+    @m_hitPoints -= amount
+    return amount
   end
 
   def mEventHandle(event)
