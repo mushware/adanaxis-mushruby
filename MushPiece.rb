@@ -62,6 +62,7 @@ class MushPiece < MushObject
     @m_expireFlag = false
     @m_hitPoints = Float(inParams[:hit_points] || 0.0)
     @m_originalHitPoints = @m_hitPoints
+    @m_alphaStutter = Float(inParams[:alpha_stutter] || 0.0)
     @m_renderScale = inParams[:render_scale] || 1.0
     unless @m_renderScale.kind_of?(MushVector)
       @m_renderScale = MushVector.new(@m_renderScale, @m_renderScale, @m_renderScale, @m_renderScale)

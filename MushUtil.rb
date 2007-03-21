@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } hcqafjSrDMKP6ZqY94zgCw
-# $Id: MushUtil.rb,v 1.4 2006/11/12 20:09:54 southa Exp $
+# $Id: MushUtil.rb,v 1.5 2007/03/13 21:45:03 southa Exp $
 # $Log: MushUtil.rb,v $
+# Revision 1.5  2007/03/13 21:45:03  southa
+# Release process
+#
 # Revision 1.4  2006/11/12 20:09:54  southa
 # Missile guidance
 #
@@ -166,5 +169,20 @@ class MushUtil < MushObject
       yield
     end
     retVal || inLastMsec
+  end
+  
+  def self.cRandomValInRange(inParam)
+    if inParam.kind_of?(Range)
+      retVal = inParam.begin + rand * (inParam.end - inParam.begin)
+    else
+      retVal = inParam
+    end
+    retVal
+  end
+  
+  def self.cClamped(inVal, inMin, inMax)
+    return inMin if inVal < inMin
+    return inMax if inVal > inMax
+    return inVal
   end
 end
