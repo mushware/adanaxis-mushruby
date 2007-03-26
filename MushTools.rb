@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } h4oTKb4c6EmlDYyTMABL4A
-# $Id: MushTools.rb,v 1.4 2006/08/01 17:21:14 southa Exp $
+# $Id: MushTools.rb,v 1.5 2007/03/13 21:45:03 southa Exp $
 # $Log: MushTools.rb,v $
+# Revision 1.5  2007/03/13 21:45:03  southa
+# Release process
+#
 # Revision 1.4  2006/08/01 17:21:14  southa
 # River demo
 #
@@ -205,7 +208,7 @@ class MushTools
 #
 # Parameters:
 #
-# magnitude - approximate radian amplited of angular velociyy
+# magnitude - approximate radian amplited of angular velocity
 #
 # Returns:
 #
@@ -215,6 +218,24 @@ class MushTools
 #
 # (example)
 #   rotation1 = MushTools.cRandomAngularVelocity(0.01)
+# (end)
+#
+# Method: cRandomSeedSet
+#
+# Sets the random seed for these value.
+#
+# Parameters:
+#
+# seed - interger seed value
+#
+# Returns:
+#
+# Bone.
+#
+# Example:
+#
+# (example)
+#   MushTools.cRandomSeedSet(12)
 # (end)
 #
 # Group: Links
