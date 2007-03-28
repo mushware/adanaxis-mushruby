@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } hcqafjSrDMKP6ZqY94zgCw
-# $Id: MushUtil.rb,v 1.5 2007/03/13 21:45:03 southa Exp $
+# $Id: MushUtil.rb,v 1.6 2007/03/21 11:56:05 southa Exp $
 # $Log: MushUtil.rb,v $
+# Revision 1.6  2007/03/21 11:56:05  southa
+# Rail effects and damage icons
+#
 # Revision 1.5  2007/03/13 21:45:03  southa
 # Release process
 #
@@ -67,7 +70,7 @@ class MushUtil < MushObject
 # (end)
 #
 
-  def self.cRotateAndSeek(ioPost, inTarget, inSpeed, inAcceleration)
+  def self.cRotateAndSeek(ioPost, inTarget, inSpeed, inAcceleration, inStandOff = 0)
     # New angular velocity is a slerp between the current angular
     # velocity and a fraction of the rotation required to rotate
     # the current angular position to point at the target
@@ -99,25 +102,30 @@ class MushUtil < MushObject
       partialRotation,
       0.2)
     
-    accelerate = false
+    accelerate = 0.0
     currentSpeed = ioPost.velocity.mMagnitude;
 
     # Test wheter above the speed limit
     if currentSpeed < inSpeed
-      # Test whether object needs to decelerate as it's about to reach the target
-      if distToTarget > currentSpeed / inAcceleration
-        # Test wther the object is facing the target enough to make it worth accelerating
+      if distToTarget < inStandOff / 2
+        # Way too close so back off
+        accelerate = -0.25
+      elsif distToTarget < inStandOff
+        # About right so stop.  Leave as 0.0
+      elsif distToTarget > currentSpeed / inAcceleration
+        # Object needs to decelerate as it's about to reach the target
+        # Test whether the object is facing the target enough to make it worth accelerating
         if (normDotProd > 0.9)
-          accelerate = true
+          accelerate = 1.0
         end
       end
     end
 
-    if accelerate
+    if accelerate != 0.0
       # Generate an acceleration vector in the direction in which the object is
       # facing (and objects always face toward -w)
       
-      ioPost.velocity = ioPost.velocity * (1.0 - inAcceleration) + deltaVelocity * inAcceleration;
+      ioPost.velocity = ioPost.velocity * (1.0 - inAcceleration) + deltaVelocity * inAcceleration * accelerate;
     else
       # Decelerating harder than acceleration, to maintain stability
       deceleration = 1.0 - 4.0 * inAcceleration
@@ -126,7 +134,7 @@ class MushUtil < MushObject
     end
     
     # Return true if aiming at the targer
-    return accelerate
+    return (normDotProd > 0.9)
   end
   
   def self.cMissileSeek(ioPost, inTarget, inSpeed, inAcceleration)
