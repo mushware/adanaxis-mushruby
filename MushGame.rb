@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } xMtGbQ1HBg2jLSq/6crVeg
-# $Id: MushGame.rb,v 1.6 2007/03/09 11:29:11 southa Exp $
+# $Id: MushGame.rb,v 1.7 2007/03/13 21:45:02 southa Exp $
 # $Log: MushGame.rb,v $
+# Revision 1.7  2007/03/13 21:45:02  southa
+# Release process
+#
 # Revision 1.6  2007/03/09 11:29:11  southa
 # Game end actions
 #
@@ -291,6 +294,30 @@ class MushGame < MushObject
 # Method: cMusicVolumeSet
 #
 # Writer for the configured music volume.
+#
+# Parameters:
+#
+# volume - New volume, range 0..100.
+#
+# Returns:
+#
+# None.
+#
+# Method: cVoiceVolume
+#
+# Reader for the configured voice volume.
+#
+# Parameters:
+#
+# None.
+#
+# Returns:
+#
+# Volume, range 0..100.
+#
+# Method: cVoiceVolumeSet
+#
+# Writer for the configured voice volume.
 #
 # Parameters:
 #
