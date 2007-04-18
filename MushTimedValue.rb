@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } vEjosFGeVKTj1+Ow9yQuyA
-# $Id: MushTimedValue.rb,v 1.1 2006/11/01 10:07:12 southa Exp $
+# $Id: MushTimedValue.rb,v 1.2 2007/03/13 21:45:03 southa Exp $
 # $Log: MushTimedValue.rb,v $
+# Revision 1.2  2007/03/13 21:45:03  southa
+# Release process
+#
 # Revision 1.1  2006/11/01 10:07:12  southa
 # Shield handling
 #
@@ -47,6 +50,8 @@ class MushTimedValue
   end
   
   def mGameMsecSinceChange
-    return MushGame.cGameMsec - @m_lastChangeMsec
+    retVal = MushGame.cGameMsec - @m_lastChangeMsec
+    @m_lastChangeMsec = MushGame.cGameMsec if retVal < 0
+    retVal
   end
 end
