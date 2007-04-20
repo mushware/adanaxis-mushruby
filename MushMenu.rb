@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } ihs0nIVtJAvxJzlI/jrZZg
-# $Id: MushMenu.rb,v 1.10 2007/03/07 11:29:22 southa Exp $
+# $Id: MushMenu.rb,v 1.11 2007/03/13 21:45:03 southa Exp $
 # $Log: MushMenu.rb,v $
+# Revision 1.11  2007/03/13 21:45:03  southa
+# Release process
+#
 # Revision 1.10  2007/03/07 11:29:22  southa
 # Level permission
 #
@@ -121,6 +124,7 @@ class MushMenu
   end
     
   def mEnter(obj)
+
     if @current < @menu.size
       symbol = @menu[@current][MENU_SYMBOL]
       obj.send(symbol, @menu[@current][MENU_PARAM], 0)
