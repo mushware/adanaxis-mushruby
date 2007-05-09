@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } hcqafjSrDMKP6ZqY94zgCw
-# $Id: MushUtil.rb,v 1.6 2007/03/21 11:56:05 southa Exp $
+# $Id: MushUtil.rb,v 1.7 2007/03/28 14:45:45 southa Exp $
 # $Log: MushUtil.rb,v $
+# Revision 1.7  2007/03/28 14:45:45  southa
+# Level and AI standoff
+#
 # Revision 1.6  2007/03/21 11:56:05  southa
 # Rail effects and damage icons
 #
@@ -160,7 +163,10 @@ class MushUtil < MushObject
     partialRotation.mRotate(angPos)
     partialRotation.mRotate(vel)
     ioPost.velocity = vel
+    angPos.mNormalise!
     ioPost.angular_position = angPos
+    # Angular velocity must be zero, but gets set on creation
+    # ioPost.angular_velocity = MushRotation.new
     
     onTarget = false
     if (normDotProd > 0.9)
