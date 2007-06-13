@@ -18,8 +18,11 @@
 #
 ##############################################################################
 #%Header } hcqafjSrDMKP6ZqY94zgCw
-# $Id: MushUtil.rb,v 1.7 2007/03/28 14:45:45 southa Exp $
+# $Id: MushUtil.rb,v 1.8 2007/05/09 19:24:42 southa Exp $
 # $Log: MushUtil.rb,v $
+# Revision 1.8  2007/05/09 19:24:42  southa
+# Level 14
+#
 # Revision 1.7  2007/03/28 14:45:45  southa
 # Level and AI standoff
 #
@@ -123,12 +126,16 @@ class MushUtil < MushObject
         end
       end
     end
-
     if accelerate != 0.0
       # Generate an acceleration vector in the direction in which the object is
       # facing (and objects always face toward -w)
-      
-      ioPost.velocity = ioPost.velocity * (1.0 - inAcceleration) + deltaVelocity * inAcceleration * accelerate;
+      if inSpeed <= 1.0
+        # Faulty algorithm - never takes speed above 1.0 - but levels assume it
+        ioPost.velocity = ioPost.velocity * (1.0 - inAcceleration) + deltaVelocity * inAcceleration * accelerate;
+      else
+        # Use this to get to higher speeds
+        ioPost.velocity = ioPost.velocity + deltaVelocity * inAcceleration * accelerate;
+      end
     else
       # Decelerating harder than acceleration, to maintain stability
       deceleration = 1.0 - 4.0 * inAcceleration
@@ -136,7 +143,7 @@ class MushUtil < MushObject
       ioPost.velocity = ioPost.velocity * deceleration
     end
     
-    # Return true if aiming at the targer
+    # Return true if aiming at the target
     return (normDotProd > 0.9)
   end
   
